@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM tiangolo/uwsgi-nginx-flask:python3.7
 
 LABEL maintainer=eray.liao@gmail.com
 
@@ -10,10 +10,10 @@ RUN python -m pip install --upgrade pip
 
 RUN pip install -r requirements.txt
 
-ENV APP_ENVIRONMENT development
+#ENV APP_ENVIRONMENT development
+#
+#ENV FLASK_APP app.py
 
-ENV FLASK_APP app.py
+#EXPOSE 5000
 
-EXPOSE 5000
-
-CMD ["sh", "-c", "flask run"]
+#CMD ["sh", "-c", "python app.py"]
