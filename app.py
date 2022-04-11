@@ -67,7 +67,7 @@ class ItemList(Resource):
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p><br><p>V2</p>"
+    return "<p>Hello, World!</p><br><p>V2 is deployed</p>"
 
 
 api.add_resource(Item, '/item/<string:name>')
