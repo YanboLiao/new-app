@@ -1,0 +1,9 @@
+pool:
+  name: Azure Pipelines
+steps:
+- task: Docker@2
+  displayName: buildAndPush
+  inputs:
+    containerRegistry: GAR
+    repository: 'web-app-cicd/web-app-docker-repo/new-app-image-azure'
+    Dockerfile: Dockerfile
